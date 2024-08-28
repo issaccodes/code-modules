@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+TODO: Change the background color for each device
+[lightsalmon] Mobile Devices: 319px — 480px
+[powderblue] iPads and Tablets: 481px — 1200px
+[limegreen] Laptops: 1201px — 1600px
+[seagreen] Desktops: 1601px and more
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Media Query</title>
+  <style>
+
+    body {
+      background-color: aquamarine;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container div {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .aquamarine, .limegreen, .seagreen, .powderblue, .lightsalmon {
+      display: none;
+    }
+
+    @media (min-width: 319px) and (max-width: 480px) {
+      body {
+        background-color: lightsalmon;
+      }
+      .lightsalmon {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: powderblue;
+      }
+      .powderblue {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: limegreen;
+      }
+      .limegreen {
+        display: flex;
+      }
+    }
+
+    @media (min-width:1601px) {
+      body {
+        background-color: seagreen;
+      }
+      .seagreen {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="lightsalmon">lightsalmon - Mobile</div>
+    <div class="powderblue">powderblue - Tablets</div>
+    <div class="limegreen">limegreen - Laptops</div>
+    <div class="aquamarine">aquamarine - Destop</div>
+    <div class="seagreen">seagreen - Extra Large Sreens</div>
+  </div>
+</body>
+
+</html>
