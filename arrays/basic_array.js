@@ -1,3 +1,3 @@
 const cars = ['saab', 'volvo', 'bmw'];
 
-console.log(cars);
+console.log(cars[0]);
